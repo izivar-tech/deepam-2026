@@ -1,0 +1,329 @@
+import type { Language } from "@/types";
+
+/**
+ * All UI strings keyed by language.
+ * English & Tamil are complete. Hindi, Telugu, Kannada, Malayalam provided.
+ * Add/edit translations here — components use `t("key")`.
+ */
+const translations: Record<Language, Record<string, string>> = {
+  en: {
+    // Splash
+    "splash.title": "Karthigai Deepam 2026",
+    "splash.subtitle": "Help Center",
+    "splash.tagline": "Scan · Find Help · Stay Safe",
+    "splash.cta": "Get Help Now",
+    "splash.powered": "Powered by IZIVAR Technologies PVT LTD, Tiruvannamalai",
+    "splash.langToggle": "தமிழ் / English",
+
+    // Services home
+    "services.festivalLabel": "Karthigai Deepam 2026",
+    "services.helpCenter": "Help Center",
+    "services.welcome": "Welcome to",
+    "services.city": "Tiruvannamalai",
+    "services.safetyMsg": "Your safety and comfort is our priority",
+    "services.announcements": "Updates",
+    "services.deepamTitle": "Mahadeepam Lighting",
+    "services.deepamDate": "Nov 10, 6:00 PM",
+    "services.days": "Days",
+    "services.hours": "Hours",
+    "services.mins": "Mins",
+    "services.secs": "Secs",
+    "services.deepamLive": "Deepam is LIVE!",
+
+    // Categories
+    "cat.police": "Police Assistance",
+    "cat.medical": "Medical Help",
+    "cat.toilet": "Toilets",
+    "cat.water": "Drinking Water",
+    "cat.hotel": "Hotels & Stays",
+    "cat.parking": "Parking",
+    "cat.bus-stand": "Temp Bus Stands",
+    "cat.bike-ambulance": "Bike Ambulance",
+
+    // Category detail page
+    "cat.helpPoints": "Help Points",
+    "cat.locating": "Locating help points…",
+    "cat.nearest": "Nearest:",
+    "cat.helpPointsCount": "help points — tap a pin to call",
+    "cat.finding": "Finding help points…",
+    "cat.callPolice": "Call Police",
+    "cat.callAmbulance": "Call Ambulance",
+    "cat.loadingMap": "Loading map…",
+
+    // Map
+    "map.youAreHere": "📍 YOU ARE HERE",
+    "map.call": "📞 Call",
+    "map.hours": "🕐",
+
+    // Language page
+    "lang.title": "Select Language",
+    "lang.subtitle": "Choose your preferred language",
+    "lang.continue": "Continue",
+
+    // Bottom brand
+    "brand.poweredBy": "Powered by",
+    "brand.company": "IZIVAR Technologies PVT LTD, Tiruvannamalai",
+  },
+
+  ta: {
+    "splash.title": "கார்த்திகை தீபம் 2026",
+    "splash.subtitle": "உதவி மையம்",
+    "splash.tagline": "ஸ்கேன் · உதவி பெறு · பாதுகாப்பாக இரு",
+    "splash.cta": "இப்போது உதவி பெறுங்கள்",
+    "splash.powered": "இயக்குவது IZIVAR Technologies PVT LTD, திருவண்ணாமலை",
+    "splash.langToggle": "தமிழ் / English",
+
+    "services.festivalLabel": "கார்த்திகை தீபம் 2026",
+    "services.helpCenter": "உதவி மையம்",
+    "services.welcome": "வருக",
+    "services.city": "திருவண்ணாமலை",
+    "services.safetyMsg": "உங்கள் பாதுகாப்பும் வசதியும் எங்கள் முன்னுரிமை",
+    "services.announcements": "அறிவிப்புகள்",
+    "services.deepamTitle": "மகாதீபம் ஏற்றுதல்",
+    "services.deepamDate": "நவ 10, மாலை 6:00",
+    "services.days": "நாட்கள்",
+    "services.hours": "மணி",
+    "services.mins": "நிமி",
+    "services.secs": "வினா",
+    "services.deepamLive": "தீபம் நேரடி!",
+
+    "cat.police": "காவல் உதவி",
+    "cat.medical": "மருத்துவ உதவி",
+    "cat.toilet": "கழிவறைகள்",
+    "cat.water": "குடிநீர்",
+    "cat.hotel": "தங்கும் விடுதி",
+    "cat.parking": "வாகன நிறுத்தம்",
+    "cat.bus-stand": "தற்காலிக பேருந்து நிலையம்",
+    "cat.bike-ambulance": "பைக் ஆம்புலன்ஸ்",
+
+    "cat.helpPoints": "உதவி இடங்கள்",
+    "cat.locating": "உதவி இடங்களைக் கண்டறிகிறது…",
+    "cat.nearest": "அருகில்:",
+    "cat.helpPointsCount": "உதவி இடங்கள் — அழைக்க பின்னை தட்டவும்",
+    "cat.finding": "உதவி இடங்களைக் கண்டறிகிறது…",
+    "cat.callPolice": "காவலரை அழை",
+    "cat.callAmbulance": "ஆம்புலன்ஸ் அழை",
+    "cat.loadingMap": "வரைபடம் ஏற்றுகிறது…",
+
+    "map.youAreHere": "📍 நீங்கள் இங்கே",
+    "map.call": "📞 அழை",
+    "map.hours": "🕐",
+
+    "lang.title": "மொழியைத் தேர்ந்தெடுக்கவும்",
+    "lang.subtitle": "உங்கள் விருப்ப மொழியைத் தேர்ந்தெடுக்கவும்",
+    "lang.continue": "தொடரவும்",
+
+    "brand.poweredBy": "இயக்குவது",
+    "brand.company": "IZIVAR Technologies PVT LTD, திருவண்ணாமலை",
+  },
+
+  hi: {
+    "splash.title": "कार्तिगै दीपम 2026",
+    "splash.subtitle": "सहायता केंद्र",
+    "splash.tagline": "स्कैन · सहायता पाएं · सुरक्षित रहें",
+    "splash.cta": "अभी सहायता पाएं",
+    "splash.powered": "संचालित IZIVAR Technologies PVT LTD, तिरुवन्नामलई",
+    "splash.langToggle": "தமிழ் / English",
+
+    "services.festivalLabel": "कार्तिगै दीपम 2026",
+    "services.helpCenter": "सहायता केंद्र",
+    "services.welcome": "स्वागत है",
+    "services.city": "तिरुवन्नामलई",
+    "services.safetyMsg": "आपकी सुरक्षा और सुविधा हमारी प्राथमिकता है",
+    "services.announcements": "अपडेट",
+    "services.deepamTitle": "महादीपम प्रज्वलन",
+    "services.deepamDate": "नवं 10, शाम 6:00",
+    "services.days": "दिन",
+    "services.hours": "घंटे",
+    "services.mins": "मिनट",
+    "services.secs": "सेकंड",
+    "services.deepamLive": "दीपम लाइव!",
+
+    "cat.police": "पुलिस सहायता",
+    "cat.medical": "चिकित्सा सहायता",
+    "cat.toilet": "शौचालय",
+    "cat.water": "पीने का पानी",
+    "cat.hotel": "होटल और ठहराव",
+    "cat.parking": "पार्किंग",
+    "cat.bus-stand": "अस्थायी बस स्टैंड",
+    "cat.bike-ambulance": "बाइक एम्बुलेंस",
+
+    "cat.helpPoints": "सहायता केंद्र",
+    "cat.locating": "सहायता केंद्र खोज रहे हैं…",
+    "cat.nearest": "निकटतम:",
+    "cat.helpPointsCount": "सहायता केंद्र — कॉल करने के लिए पिन दबाएं",
+    "cat.finding": "सहायता केंद्र खोज रहे हैं…",
+    "cat.callPolice": "पुलिस को कॉल करें",
+    "cat.callAmbulance": "एम्बुलेंस कॉल करें",
+    "cat.loadingMap": "मानचित्र लोड हो रहा है…",
+
+    "map.youAreHere": "📍 आप यहाँ हैं",
+    "map.call": "📞 कॉल करें",
+    "map.hours": "🕐",
+
+    "lang.title": "भाषा चुनें",
+    "lang.subtitle": "अपनी पसंदीदा भाषा चुनें",
+    "lang.continue": "जारी रखें",
+
+    "brand.poweredBy": "संचालित",
+    "brand.company": "IZIVAR Technologies PVT LTD, तिरुवन्नामलई",
+  },
+
+  te: {
+    "splash.title": "కార్తీగై దీపం 2026",
+    "splash.subtitle": "సహాయ కేంద్రం",
+    "splash.tagline": "స్కాన్ · సహాయం పొందండి · సురక్షితంగా ఉండండి",
+    "splash.cta": "ఇప్పుడు సహాయం పొందండి",
+    "splash.powered": "నిర్వహణ IZIVAR Technologies PVT LTD, తిరువణ్ణామలై",
+    "splash.langToggle": "தமிழ் / English",
+
+    "services.festivalLabel": "కార్తీగై దీపం 2026",
+    "services.helpCenter": "సహాయ కేంద్రం",
+    "services.welcome": "స్వాగతం",
+    "services.city": "తిరువణ్ణామలై",
+    "services.safetyMsg": "మీ భద్రత మరియు సౌకర్యం మా ప్రాధాన్యత",
+    "services.announcements": "అప్‌డేట్‌లు",
+    "services.deepamTitle": "మహాదీపం వెలిగింపు",
+    "services.deepamDate": "నవం 10, సాయంత్రం 6:00",
+    "services.days": "రోజులు",
+    "services.hours": "గంటలు",
+    "services.mins": "నిమి",
+    "services.secs": "సెకన్లు",
+    "services.deepamLive": "దీపం లైవ్!",
+
+    "cat.police": "పోలీసు సహాయం",
+    "cat.medical": "వైద్య సహాయం",
+    "cat.toilet": "మరుగుదొడ్లు",
+    "cat.water": "తాగునీరు",
+    "cat.hotel": "హోటళ్లు & బస",
+    "cat.parking": "పార్కింగ్",
+    "cat.bus-stand": "తాత్కాలిక బస్ స్టాండ్",
+    "cat.bike-ambulance": "బైక్ అంబులెన్స్",
+
+    "cat.helpPoints": "సహాయ కేంద్రాలు",
+    "cat.locating": "సహాయ కేంద్రాలను కనుగొంటోంది…",
+    "cat.nearest": "సమీపంలో:",
+    "cat.helpPointsCount": "సహాయ కేంద్రాలు — కాల్ చేయడానికి పిన్ నొక్కండి",
+    "cat.finding": "సహాయ కేంద్రాలను కనుగొంటోంది…",
+    "cat.callPolice": "పోలీసులకు కాల్ చేయండి",
+    "cat.callAmbulance": "అంబులెన్స్ కాల్ చేయండి",
+    "cat.loadingMap": "మ్యాప్ లోడ్ అవుతోంది…",
+
+    "map.youAreHere": "📍 మీరు ఇక్కడ ఉన్నారు",
+    "map.call": "📞 కాల్",
+    "map.hours": "🕐",
+
+    "lang.title": "భాషను ఎంచుకోండి",
+    "lang.subtitle": "మీ ఇష్టమైన భాషను ఎంచుకోండి",
+    "lang.continue": "కొనసాగించు",
+
+    "brand.poweredBy": "నిర్వహణ",
+    "brand.company": "IZIVAR Technologies PVT LTD, తిరువణ్ణామలై",
+  },
+
+  kn: {
+    "splash.title": "ಕಾರ್ತಿಗೈ ದೀಪಂ 2026",
+    "splash.subtitle": "ಸಹಾಯ ಕೇಂದ್ರ",
+    "splash.tagline": "ಸ್ಕ್ಯಾನ್ · ಸಹಾಯ ಪಡೆಯಿರಿ · ಸುರಕ್ಷಿತವಾಗಿರಿ",
+    "splash.cta": "ಈಗ ಸಹಾಯ ಪಡೆಯಿರಿ",
+    "splash.powered": "ನಿರ್ವಹಣೆ IZIVAR Technologies PVT LTD, ತಿರುವಣ್ಣಾಮಲೈ",
+    "splash.langToggle": "தமிழ் / English",
+
+    "services.festivalLabel": "ಕಾರ್ತಿಗೈ ದೀಪಂ 2026",
+    "services.helpCenter": "ಸಹಾಯ ಕೇಂದ್ರ",
+    "services.welcome": "ಸ್ವಾಗತ",
+    "services.city": "ತಿರುವಣ್ಣಾಮಲೈ",
+    "services.safetyMsg": "ನಿಮ್ಮ ಸುರಕ್ಷತೆ ಮತ್ತು ಆರಾಮ ನಮ್ಮ ಆದ್ಯತೆ",
+    "services.announcements": "ಅಪ್‌ಡೇಟ್‌ಗಳು",
+    "services.deepamTitle": "ಮಹಾದೀಪಂ ಬೆಳಗಿಸುವಿಕೆ",
+    "services.deepamDate": "ನವೆಂ 10, ಸಂಜೆ 6:00",
+    "services.days": "ದಿನಗಳು",
+    "services.hours": "ಗಂಟೆ",
+    "services.mins": "ನಿಮಿ",
+    "services.secs": "ಸೆಕೆಂ",
+    "services.deepamLive": "ದೀಪಂ ಲೈವ್!",
+
+    "cat.police": "ಪೊಲೀಸ್ ಸಹಾಯ",
+    "cat.medical": "ವೈದ್ಯಕೀಯ ಸಹಾಯ",
+    "cat.toilet": "ಶೌಚಾಲಯಗಳು",
+    "cat.water": "ಕುಡಿಯುವ ನೀರು",
+    "cat.hotel": "ಹೋಟೆಲ್‌ಗಳು & ತಂಗುವಿಕೆ",
+    "cat.parking": "ಪಾರ್ಕಿಂಗ್",
+    "cat.bus-stand": "ತಾತ್ಕಾಲಿಕ ಬಸ್ ನಿಲ್ದಾಣ",
+    "cat.bike-ambulance": "ಬೈಕ್ ಆಂಬುಲೆನ್ಸ್",
+
+    "cat.helpPoints": "ಸಹಾಯ ಕೇಂದ್ರಗಳು",
+    "cat.locating": "ಸಹಾಯ ಕೇಂದ್ರಗಳನ್ನು ಹುಡುಕುತ್ತಿದೆ…",
+    "cat.nearest": "ಹತ್ತಿರದ:",
+    "cat.helpPointsCount": "ಸಹಾಯ ಕೇಂದ್ರಗಳು — ಕಾಲ್ ಮಾಡಲು ಪಿನ್ ಒತ್ತಿ",
+    "cat.finding": "ಸಹಾಯ ಕೇಂದ್ರಗಳನ್ನು ಹುಡುಕುತ್ತಿದೆ…",
+    "cat.callPolice": "ಪೊಲೀಸರಿಗೆ ಕಾಲ್ ಮಾಡಿ",
+    "cat.callAmbulance": "ಆಂಬುಲೆನ್ಸ್ ಕಾಲ್ ಮಾಡಿ",
+    "cat.loadingMap": "ನಕ್ಷೆ ಲೋಡ್ ಆಗುತ್ತಿದೆ…",
+
+    "map.youAreHere": "📍 ನೀವು ಇಲ್ಲಿದ್ದೀರಿ",
+    "map.call": "📞 ಕಾಲ್",
+    "map.hours": "🕐",
+
+    "lang.title": "ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "lang.subtitle": "ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "lang.continue": "ಮುಂದುವರಿಸಿ",
+
+    "brand.poweredBy": "ನಿರ್ವಹಣೆ",
+    "brand.company": "IZIVAR Technologies PVT LTD, ತಿರುವಣ್ಣಾಮಲೈ",
+  },
+
+  ml: {
+    "splash.title": "കാർത്തിഗൈ ദീപം 2026",
+    "splash.subtitle": "സഹായ കേന്ദ്രം",
+    "splash.tagline": "സ്കാൻ · സഹായം നേടൂ · സുരക്ഷിതമായിരിക്കൂ",
+    "splash.cta": "ഇപ്പോൾ സഹായം നേടൂ",
+    "splash.powered": "നടത്തുന്നത് IZIVAR Technologies PVT LTD, തിരുവണ്ണാമല",
+    "splash.langToggle": "தமிழ் / English",
+
+    "services.festivalLabel": "കാർത്തിഗൈ ദീപം 2026",
+    "services.helpCenter": "സഹായ കേന്ദ്രം",
+    "services.welcome": "സ്വാഗതം",
+    "services.city": "തിരുവണ്ണാമല",
+    "services.safetyMsg": "നിങ്ങളുടെ സുരക്ഷയും സൗകര്യവും ഞങ്ങളുടെ മുൻഗണനയാണ്",
+    "services.announcements": "അപ്‌ഡേറ്റുകൾ",
+    "services.deepamTitle": "മഹാദീപം തെളിയിക്കൽ",
+    "services.deepamDate": "നവം 10, വൈകുന്നേരം 6:00",
+    "services.days": "ദിവസം",
+    "services.hours": "മണിക്കൂർ",
+    "services.mins": "മിനി",
+    "services.secs": "സെക്കൻ",
+    "services.deepamLive": "ദീപം ലൈവ്!",
+
+    "cat.police": "പോലീസ് സഹായം",
+    "cat.medical": "മെഡിക്കൽ സഹായം",
+    "cat.toilet": "ടോയ്‌ലറ്റുകൾ",
+    "cat.water": "കുടിവെള്ളം",
+    "cat.hotel": "ഹോട്ടലുകൾ & താമസം",
+    "cat.parking": "പാർക്കിംഗ്",
+    "cat.bus-stand": "താൽക്കാലിക ബസ് സ്റ്റാൻഡ്",
+    "cat.bike-ambulance": "ബൈക്ക് ആംബുലൻസ്",
+
+    "cat.helpPoints": "സഹായ കേന്ദ്രങ്ങൾ",
+    "cat.locating": "സഹായ കേന്ദ്രങ്ങൾ കണ്ടെത്തുന്നു…",
+    "cat.nearest": "അടുത്തുള്ളത്:",
+    "cat.helpPointsCount": "സഹായ കേന്ദ്രങ്ങൾ — കാൾ ചെയ്യാൻ പിൻ ടാപ്പ് ചെയ്യുക",
+    "cat.finding": "സഹായ കേന്ദ്രങ്ങൾ കണ്ടെത്തുന്നു…",
+    "cat.callPolice": "പോലീസിനെ വിളിക്കുക",
+    "cat.callAmbulance": "ആംബുലൻസ് വിളിക്കുക",
+    "cat.loadingMap": "മാപ്പ് ലോഡ് ചെയ്യുന്നു…",
+
+    "map.youAreHere": "📍 നിങ്ങൾ ഇവിടെയാണ്",
+    "map.call": "📞 കാൾ",
+    "map.hours": "🕐",
+
+    "lang.title": "ഭാഷ തിരഞ്ഞെടുക്കുക",
+    "lang.subtitle": "നിങ്ങൾ ഇഷ്ടപ്പെടുന്ന ഭാഷ തിരഞ്ഞെടുക്കുക",
+    "lang.continue": "തുടരുക",
+
+    "brand.poweredBy": "നടത്തുന്നത്",
+    "brand.company": "IZIVAR Technologies PVT LTD, തിരുവണ്ണാമല",
+  },
+};
+
+export default translations;

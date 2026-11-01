@@ -1,0 +1,38 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "helpPoints",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "eventIds", "arrayConfig": "CONTAINS" },
+        { "fieldPath": "status", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "helpPoints",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "eventIds", "arrayConfig": "CONTAINS" },
+        { "fieldPath": "category", "order": "ASCENDING" },
+        { "fieldPath": "status", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "assistanceRequests",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "eventId", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "qrScans",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "eventId", "order": "ASCENDING" },
+        { "fieldPath": "scannedAt", "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

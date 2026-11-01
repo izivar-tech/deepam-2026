@@ -1,0 +1,72 @@
+{
+  "id": "deepam-2026",
+  "name": "Karthigai Deepam 2026",
+  "nameTamil": "கார்த்திகை தீபம் 2026",
+  "type": "deepam",
+  "date": "2026-11-10",
+  "startDate": "2026-11-08",
+  "endDate": "2026-11-12",
+  "isLive": true,
+  "categories": ["police", "medical", "toilet", "water", "parking", "bus-stand", "bike-ambulance"],
+  "announcements": [
+    {
+      "id": "ann-001",
+      "title": "Route & Traffic Update",
+      "titleTamil": "பாதை & போக்குவரத்து தகவல்",
+      "body": "Girivalam route is open from 5 AM. Avoid Car Street during 6–10 PM. Follow police guidance at all checkpoints.",
+      "bodyTamil": "கிரிவலம் பாதை காலை 5 மணியிலிருந்து திறந்துள்ளது. மாலை 6–10 மணி நேரத்தில் கார் தெருவை தவிர்க்கவும். அனைத்து சோதனைச்சாவடிகளிலும் காவல் வழிகாட்டுதலைப் பின்பற்றவும்.",
+      "priority": "normal",
+      "createdAt": "2026-11-08T06:00:00.000Z"
+    },
+    {
+      "id": "ann-002",
+      "title": "Deepam Lighting — 6 PM on Nov 10",
+      "titleTamil": "தீபம் ஏற்றுதல் — நவம்பர் 10 மாலை 6 மணி",
+      "body": "The sacred Mahadeepam will be lit on Arunachala Hill at 6:00 PM on November 10. Gather at designated viewing areas. Vehicles are not permitted on Car Street after 4 PM.",
+      "bodyTamil": "புனித மகாதீபம் நவம்பர் 10 மாலை 6:00 மணிக்கு அருணாசல மலையில் ஏற்றப்படும். நியமிக்கப்பட்ட பார்வை இடங்களில் கூடுங்கள். மாலை 4 மணிக்குப் பிறகு கார் தெருவில் வாகனங்கள் அனுமதிக்கப்படமாட்டாது.",
+      "priority": "high",
+      "createdAt": "2026-11-09T00:00:00.000Z"
+    },
+    {
+      "id": "ann-003",
+      "title": "Lost & Found — Help Desk",
+      "titleTamil": "காணாமல் போன பொருட்கள் — உதவி மையம்",
+      "body": "Lost children or belongings should be reported at the Main Pilgrim Help Desk on West Car Street or call 94439 99999.",
+      "bodyTamil": "காணாமல் போன குழந்தைகள் அல்லது பொருட்களை மேற்கு கார் தெருவில் உள்ள பிரதான யாத்ரீகர் உதவி மையத்தில் தெரிவிக்கவும் அல்லது 94439 99999 என்ற எண்ணில் அழைக்கவும்.",
+      "priority": "normal",
+      "createdAt": "2026-11-09T12:00:00.000Z"
+    }
+  ],
+  "emergencyContacts": [
+    {
+      "label": "Police Control Room",
+      "labelTamil": "காவல் கட்டுப்பாட்டு அறை",
+      "phone": "112",
+      "description": "Emergency police line",
+      "descriptionTamil": "அவசர காவல் எண்"
+    },
+    {
+      "label": "Ambulance",
+      "labelTamil": "ஆம்புலன்ஸ்",
+      "phone": "108",
+      "description": "Emergency medical services",
+      "descriptionTamil": "அவசர மருத்துவ சேவை"
+    },
+    {
+      "label": "Fire & Rescue",
+      "labelTamil": "தீயணைப்பு & மீட்பு",
+      "phone": "101",
+      "description": "Fire emergency",
+      "descriptionTamil": "தீ அவசரநிலை"
+    },
+    {
+      "label": "Pilgrim Help Desk",
+      "labelTamil": "யாத்ரீகர் உதவி மையம்",
+      "phone": "+91 94439 99999",
+      "description": "Lost & found, general assistance",
+      "descriptionTamil": "காணாமல் போன பொருட்கள், பொது உதவி"
+    }
+  ],
+  "createdAt": "2026-10-01T00:00:00.000Z",
+  "updatedAt": "2026-10-31T00:00:00.000Z"
+}
