@@ -5,7 +5,6 @@ import { useHelpPoints } from "@/hooks/use-help-points";
 import { useGeolocation } from "@/hooks/use-geolocation";
 import { PageHeader } from "@/components/guest/PageHeader";
 import { CATEGORIES, CATEGORY_MAP } from "@/constants/categories";
-import { formatDistance } from "@/lib/geo";
 import Link from "next/link";
 import { useState } from "react";
 import type { HelpPointCategory } from "@/types";

@@ -1,19 +1,26 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@izivar/ux";
 import { useTranslation } from "@/hooks/use-translation";
+import { logQRScan } from "@/services/qr-scan-service";
 
 export default function SplashPage() {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
+
+  // Log QR scan on first visit (this is where QR codes land)
+  useEffect(() => {
+    logQRScan({ language: lang });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="relative min-h-screen flex flex-col">
       {/* Hero background */}
       <div className="absolute inset-0">
         <Image
-          src="/Golden_Temple_Chariot_Sunset.png"
+          src="/temple-hero.webp"
           alt="Tiruvannamalai Temple"
           fill
           className="object-cover object-bottom"

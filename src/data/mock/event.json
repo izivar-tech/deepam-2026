@@ -3,9 +3,9 @@
   "name": "Karthigai Deepam 2026",
   "nameTamil": "கார்த்திகை தீபம் 2026",
   "type": "deepam",
-  "date": "2026-11-10",
-  "startDate": "2026-11-08",
-  "endDate": "2026-11-12",
+  "date": "2026-11-24",
+  "startDate": "2026-11-24",
+  "endDate": "2026-11-24",
   "isLive": true,
   "categories": ["police", "medical", "toilet", "water", "parking", "bus-stand", "bike-ambulance"],
   "announcements": [
@@ -20,10 +20,10 @@
     },
     {
       "id": "ann-002",
-      "title": "Deepam Lighting — 6 PM on Nov 10",
-      "titleTamil": "தீபம் ஏற்றுதல் — நவம்பர் 10 மாலை 6 மணி",
-      "body": "The sacred Mahadeepam will be lit on Arunachala Hill at 6:00 PM on November 10. Gather at designated viewing areas. Vehicles are not permitted on Car Street after 4 PM.",
-      "bodyTamil": "புனித மகாதீபம் நவம்பர் 10 மாலை 6:00 மணிக்கு அருணாசல மலையில் ஏற்றப்படும். நியமிக்கப்பட்ட பார்வை இடங்களில் கூடுங்கள். மாலை 4 மணிக்குப் பிறகு கார் தெருவில் வாகனங்கள் அனுமதிக்கப்படமாட்டாது.",
+      "title": "Deepam Lighting — 6 PM on Nov 24",
+      "titleTamil": "தீபம் ஏற்றுதல் — நவம்பர் 24 மாலை 6 மணி",
+      "body": "The sacred Mahadeepam will be lit on Arunachala Hill at 6:00 PM on November 24. Gather at designated viewing areas. Vehicles are not permitted on Car Street after 4 PM.",
+      "bodyTamil": "புனித மகாதீபம் நவம்பர் 24 மாலை 6:00 மணிக்கு அருணாசல மலையில் ஏற்றப்படும். நியமிக்கப்பட்ட பார்வை இடங்களில் கூடுங்கள். மாலை 4 மணிக்குப் பிறகு கார் தெருவில் வாகனங்கள் அனுமதிக்கப்படமாட்டாது.",
       "priority": "high",
       "createdAt": "2026-11-09T00:00:00.000Z"
     },

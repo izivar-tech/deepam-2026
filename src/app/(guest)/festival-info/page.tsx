@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEventContext } from "@/contexts/event-context";
 import { PageHeader } from "@/components/guest/PageHeader";
 import { BottomBrand } from "@/components/guest/BottomBrand";

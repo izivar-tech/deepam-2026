@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useRef, useSyncExternalStore } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useEventContext } from "@/contexts/event-context";
@@ -20,24 +20,31 @@ const CATEGORY_EMOJI: Record<string, string> = {
   "bike-ambulance": "🏍️",
 };
 
-// Deepam lighting: Nov 10 2026, 6:00 PM IST (UTC+5:30)
-const DEEPAM_TIME = new Date("2026-11-10T18:00:00+05:30").getTime();
+// Deepam lighting: Nov 24 2026, 6:00 PM IST (UTC+5:30)
+const DEEPAM_TIME = new Date("2026-11-24T18:00:00+05:30").getTime();
 
 function useCountdown(target: number) {
-  const [now, setNow] = useState(Date.now());
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  useEffect(() => {
-    const id = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(id);
-  }, []);
+  const now = useSyncExternalStore(
+    (onStoreChange) => {
+      intervalRef.current = setInterval(onStoreChange, 1000);
+      return () => {
+        if (intervalRef.current) clearInterval(intervalRef.current);
+      };
+    },
+    () => Date.now(),       // client
+    () => target,           // server — renders "00:00:00" (no mismatch)
+  );
 
   const diff = Math.max(0, target - now);
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
   const mins = Math.floor((diff / (1000 * 60)) % 60);
   const secs = Math.floor((diff / 1000) % 60);
+  const mounted = now !== target;
 
-  return { days, hours, mins, secs, isLive: diff === 0 };
+  return { days, hours, mins, secs, isLive: diff === 0, mounted };
 }
 
 export default function ServicesPage() {
@@ -102,7 +109,18 @@ export default function ServicesPage() {
           {t("services.deepamDate")}
         </p>
 
-        {countdown.isLive ? (
+        {!countdown.mounted ? (
+          <div className="flex gap-2 mt-3">
+            {[t("services.days"), t("services.hours"), t("services.mins"), t("services.secs")].map((label) => (
+              <div key={label} className="text-center">
+                <div className="bg-white/10 rounded-lg px-2.5 py-1.5 min-w-[36px]">
+                  <p className="text-lg font-bold text-white leading-none">--</p>
+                </div>
+                <p className="text-[9px] text-white/50 mt-1 font-semibold">{label}</p>
+              </div>
+            ))}
+          </div>
+        ) : countdown.isLive ? (
           <p className="title-small font-bold text-accent-gold mt-3 animate-pulse">
             {t("services.deepamLive")}
           </p>
@@ -204,7 +222,7 @@ export default function ServicesPage() {
           {/* Logo */}
           <div className="shrink-0">
             <Image
-              src="/Tavix_Primary_GPT.png"
+              src="/Tavix_Primary.png"
               alt="Tavix"
               width={48}
               height={48}
@@ -213,14 +231,14 @@ export default function ServicesPage() {
 
           {/* Text */}
           <div className="flex-1 min-w-0">
-            <p className="text-[11px] font-bold uppercase tracking-[0.15em]" style={{ color: "#192b3d" }}>
+            <p className="text-base font-bold" style={{ color: "#192b3d" }}>
               Tavix
             </p>
-            <p className="title-small font-bold mt-0.5 leading-snug" style={{ color: "#192b3d" }}>
+            <p className="text-xs text-muted-foreground mt-0.5 leading-snug">
               Home, Anywhere You Go.
             </p>
-            <p className="text-xs text-muted-foreground mt-1">
-              Find verified hotels &amp; stays
+            <p className="text-xs text-muted-foreground mt-0.5">
+              Tiruvannamalai&apos;s hotel booking app
             </p>
           </div>
 
