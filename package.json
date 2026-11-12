@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@izivar/ux": "0.4.12",
+    "@izivar/ux": "file:vendor/izivar-ux-0.4.12.tgz",
     "leaflet": "^1.9.4",
     "next": "16.4.3",
     "react": "19.3.0",

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@izivar/ux':
-        specifier: 0.4.12
-        version: 0.4.12(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(next@16.4.3(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        specifier: file:vendor/izivar-ux-0.4.12.tgz
+        version: file:vendor/izivar-ux-0.4.12.tgz(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(next@16.4.3(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       leaflet:
         specifier: ^1.9.4
         version: 1.9.4
@@ -384,8 +384,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@izivar/ux@0.4.12':
-    resolution: {integrity: sha512-BgoWPQvZFcoT8wFNcs3BkIa9gu7NX6xoOodfA7Vt7dOSwGv7DKOqu8CkuvGrciC9KiGpYMkp32ntDGvIyjmdbA==, tarball: https://asia-south1-npm.pkg.dev/izivar-hotel-qa/izivar-npm/@izivar/ux/-/@izivar/ux-0.4.12.tgz}
+  '@izivar/ux@file:vendor/izivar-ux-0.4.12.tgz':
+    resolution: {integrity: sha512-u2y++o+5gdhcDpLUHVq24A94PH8z4PX7hjNZMgTjT6gSu1qdVedTPw4wI8byn7/fYqF2HLZFrXF/ybooIDeMuA==, tarball: file:vendor/izivar-ux-0.4.12.tgz}
+    version: 0.4.12
     engines: {node: '>=20.9.0', pnpm: '>=8.0.0'}
     peerDependencies:
       next: ^16
@@ -3206,7 +3207,7 @@ snapshots:
   '@img/sharp-win32-x64@0.35.5':
     optional: true
 
-  '@izivar/ux@0.4.12(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(next@16.4.3(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@izivar/ux@file:vendor/izivar-ux-0.4.12.tgz(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(next@16.4.3(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       '@radix-ui/react-checkbox': 1.4.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@radix-ui/react-dialog': 1.3.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
