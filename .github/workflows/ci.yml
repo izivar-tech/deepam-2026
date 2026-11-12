@@ -1,7 +1,11 @@
-name: Deploy
+name: CI
 
 on:
   push:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+  pull_request:
     branches: [main]
     paths-ignore:
       - "**.md"
@@ -15,8 +19,8 @@ permissions:
   contents: read
 
 jobs:
-  deploy:
-    name: Lint · Build · Deploy to Vercel
+  ci:
+    name: Lint · Type Check · Build
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -56,14 +60,4 @@ jobs:
       - name: Build
         run: pnpm build
         env:
-          NEXT_PUBLIC_MAPBOX_TOKEN: ${{ secrets.NEXT_PUBLIC_MAPBOX_TOKEN }}
           NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
-
-      - name: Deploy to Vercel
-        run: |
-          pnpm dlx vercel deploy --prod \
-            --token=${{ secrets.VERCEL_TOKEN }} \
-            --yes
-        env:
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}

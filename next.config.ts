@@ -28,10 +28,10 @@ const nextConfig: NextConfig = {
             value: [
               "default-src 'self'",
               `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com https://www.google-analytics.com`,
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://api.mapbox.com",
-              "img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://*.mapbox.com",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com",
+              "img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://*.tile.openstreetmap.org",
               "font-src 'self' https://fonts.gstatic.com",
-              `connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://api.mapbox.com https://events.mapbox.com${isDev ? " ws:" : ""}`,
+              `connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://*.tile.openstreetmap.org https://router.project-osrm.org${isDev ? " ws:" : ""}`,
               "worker-src blob:",
               "frame-ancestors 'none'",
             ].join("; "),
