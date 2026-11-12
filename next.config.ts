@@ -5,6 +5,15 @@ const isDev = process.env.NODE_ENV === "development";
 const nextConfig: NextConfig = {
   compress: true,
 
+  turbopack: {
+    rules: {
+      "*.css": {
+        loaders: ["@tailwindcss/turbopack"],
+        as: "*.css",
+      },
+    },
+  },
+
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60 * 60 * 24 * 60,
